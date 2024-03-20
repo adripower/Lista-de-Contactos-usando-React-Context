@@ -12,4 +12,5 @@ export const Home = () => (
 			If you see this green button, bootstrap is working
 		</a>
 	</div>
+	
 );
