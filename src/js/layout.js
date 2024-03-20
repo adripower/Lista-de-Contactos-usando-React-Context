@@ -10,7 +10,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
-import{AddContarct} from "./views/AddContact";
+
 import { Contact } from "./views/Contact";
 
 
