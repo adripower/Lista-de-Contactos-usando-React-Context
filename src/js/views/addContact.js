@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export const AddContact = () => {
   return (
@@ -60,8 +61,8 @@ export const AddContact = () => {
 </div>
        
         <div className="d-grid ">
-             <button className="btn btn-primary" type="button">Button</button>
-  
+           
+  <Link to="/" className="btn btn-primary" >   esta si vale a medias   </Link>
             </div>
       </form>
     </div>
