@@ -18,7 +18,7 @@ export const AddContact = () => {
   
 const handleSubmit = (e) =>{                     {/* creamos una consta handleSumit con un evento (e) le añadimos preventDefault para que lo mande pero no recargue */}
   e.preventDefault();
-  console.log("enviar", {nombre, email});        {/* creamos un console.log("enviar") solo para verificar que funciona*/}
+  console.log("enviar", {nombre, email, telefono, direccion});        {/* creamos un console.log("enviar") solo para verificar que funciona*/}
 
 }
 
@@ -31,6 +31,13 @@ const handleEmail=(e)=>{
   setEmail(e.target.value);
   console.log(e.target.value);
 }
+const handleTelefono=(e)=>{
+  setTelefono(e.target.value);
+}
+const handleDirecion=(e)=>{
+  setDireccion(e.target.value);
+}
+
 
 
   return (
@@ -73,32 +80,34 @@ const handleEmail=(e)=>{
         </div>
 
 
-<div className="mb-3">
-  <label for="InputTelefono" className="form-label">
-  Telefono
-  </label>
-  <input
-    type="text"
-    className="form-control"
-    id="InputTelefono"
-    placeholder="Pon aqui tu numero de Telefono"
-    value={telefono}
-  />
-</div>
+        <div className="mb-3">
+          <label for="InputTelefono" className="form-label">
+           Telefono
+           </label>
+           <input
+           type="text"
+           className="form-control"
+           id="InputTelefono"
+           placeholder="Pon aqui tu numero de Telefono"
+           value={telefono}
+           onChange={handleTelefono}
+          />
+        </div>
 
 
-<div className="mb-3">
-  <label for="InputDireccion" className="form-label">
-  Direccion
-  </label>
-  <input
-    type="text"
-    className="form-control"
-    id="InputDireccion"
-    placeholder="Pon aqui tu Direccion"
-    value={direccion}
-  />
-</div>
+        <div className="mb-3">
+          <label for="InputDireccion" className="form-label">
+          Direccion
+          </label>
+          <input
+          type="text"
+          className="form-control"
+          id="InputDireccion"
+          placeholder="Pon aqui tu Direccion"
+          value={direccion}
+          onChange={handleDirecion}
+        />
+      </div>
        
         <div className="d-grid ">
            
