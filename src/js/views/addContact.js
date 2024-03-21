@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export const Contact = () => {
+export const AddContact = () => {
   return (
     <div className="container">
       <h1 className="text-center">Add a new contact</h1>
