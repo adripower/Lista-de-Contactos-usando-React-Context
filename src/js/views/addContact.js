@@ -50,8 +50,8 @@ const handleDirecion=(e)=>{
       <form className="formulario" onSubmit={handleSubmit} >  {/*aqui añadimos un onSubmit que llama a la funcion handleSubmit   */}
 
         <div className="mb-3">
-          <label for="fullName" className="form-label">
-            Full Name
+          <label for="inputfullName" className="form-label">
+            Nombre completo
           </label>
           <input
             type="text"
