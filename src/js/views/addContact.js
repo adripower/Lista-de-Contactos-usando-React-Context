@@ -18,13 +18,13 @@ export const AddContact = () => {
   
 const handleSubmit = (e) =>{                     {/* creamos una consta handleSumit con un evento (e) le añadimos preventDefault para que lo mande pero no recargue */}
   e.preventDefault();
-  console.log("enviar", {nombre, email});                         {/*creamos un console.log("enviar") solo para verificar que funciona*/}
+  console.log("enviar", {nombre, email});        {/* creamos un console.log("enviar") solo para verificar que funciona*/}
 
 }
 
-const handleNombre =(e)=>{                        {/*creamos una cosnt de handleNombre , con el evento (e) que guarda en setNombrey e guarda el value */}
+const handleNombre =(e)=>{                        {/* creamos una cosnt de handleNombre , con el evento (e) que guarda en setNombrey e guarda el value */}
   setNombre(e.target.value);    
-  console.log(e.target.value);                    {/*el console.log es solo para verificar  */}
+  console.log(e.target.value);                    {/* el console.log es solo para verificar  */}
 
 }
 const handleEmail=(e)=>{
@@ -112,7 +112,7 @@ const handleEmail=(e)=>{
 };
 
 
- {/* - indicamos typo=submit para que mande el formmulario 
+ /*  - indicamos typo=submit para que mande el formmulario 
      - añadimos un onSubmit que llama a la funcion handleSubmit  
      - creamos una consta handleSumit con un evento (e) le añadimos preventDefault para que lo mande pero no recargue 
      - creamos un console.log("enviar") solo para verificar que funciona
@@ -126,4 +126,4 @@ const handleEmail=(e)=>{
 
 
 
-*/}
+*/
