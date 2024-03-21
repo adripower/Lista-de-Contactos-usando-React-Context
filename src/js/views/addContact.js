@@ -1,12 +1,26 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+
 export const AddContact = () => {
+
+
+
+  
+const handleSubmit = (e) =>{                     {/* creamos una consta handleSumit con un evento (e) le añadimos preventDefault para que lo mande pero no recargue */}
+  e.preventDefault();
+  console.log("enviar");                         {/*creamos un console.log("enviar") solo para verificar que funciona*/}
+
+}
+
+
   return (
+
+
+
     <div className="container">
       <h1 className="text-center">Add a new contact</h1>
-      <form>
-
+      <form className="formulario" onSubmit={handleSubmit} >  {/*aqui añadimos un onSubmit que llama a la funcion handleSubmit   */}
 
         <div className="mb-3">
           <label for="fullName" className="form-label">
@@ -62,9 +76,23 @@ export const AddContact = () => {
        
         <div className="d-grid ">
            
-  <Link to="/" className="btn btn-primary" >   esta si vale a medias   </Link>
+  <Link to="/" className="btn btn-primary" >   esto te manda a la pagina principal es una prueba   </Link>
+  <br></br>
+  <button className="btn btn-primary" type="submit">Enviar formulario .. en desarrollo</button>    {/*  indicamos typo=submit para que mande el formmulario */}
             </div>
       </form>
     </div>
   );
 };
+
+
+ {/* - indicamos typo=submit para que mande el formmulario 
+     - añadimos un onSubmit que llama a la funcion handleSubmit  
+     - creamos una consta handleSumit con un evento (e) le añadimos preventDefault para que lo mande pero no recargue 
+     - creamos un console.log("enviar") solo para verificar que funciona
+
+
+
+
+
+*/}
