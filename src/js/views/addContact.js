@@ -1,16 +1,35 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 
 
+
+
 export const AddContact = () => {
+
+
+  const [nombre, setNombre] = useState("");         {/*creamos una constate con los estados para poder llamarlos */}
+  const [email, setEmail] = useState("");
+  const [telefono, setTelefono]= useState("");
+  const [direccion, setDireccion]= useState("");
+
 
 
 
   
 const handleSubmit = (e) =>{                     {/* creamos una consta handleSumit con un evento (e) le añadimos preventDefault para que lo mande pero no recargue */}
   e.preventDefault();
-  console.log("enviar");                         {/*creamos un console.log("enviar") solo para verificar que funciona*/}
+  console.log("enviar", {nombre, email});                         {/*creamos un console.log("enviar") solo para verificar que funciona*/}
 
+}
+
+const handleNombre =(e)=>{                        {/*creamos una cosnt de handleNombre , con el evento (e) que guarda en setNombrey e guarda el value */}
+  setNombre(e.target.value);    
+  console.log(e.target.value);                    {/*el console.log es solo para verificar  */}
+
+}
+const handleEmail=(e)=>{
+  setEmail(e.target.value);
+  console.log(e.target.value);
 }
 
 
@@ -20,6 +39,7 @@ const handleSubmit = (e) =>{                     {/* creamos una consta handleSu
 
     <div className="container">
       <h1 className="text-center">Add a new contact</h1>
+
       <form className="formulario" onSubmit={handleSubmit} >  {/*aqui añadimos un onSubmit que llama a la funcion handleSubmit   */}
 
         <div className="mb-3">
@@ -32,6 +52,8 @@ const handleSubmit = (e) =>{                     {/* creamos una consta handleSu
             id="textName"
             aria-describedby="FullName"
             placeholder="Pon aqui tu Nombre completo"
+            value={nombre}     /*creamos value=nombre para que cambie el estado que asignamos */
+            onChange={handleNombre}   /*creamos onChange para capturar los cambios que se realizen */
           />
         </div>
 
@@ -45,6 +67,8 @@ const handleSubmit = (e) =>{                     {/* creamos una consta handleSu
             className="form-control"
             id="InputEmail"
             placeholder="Pon aqui tu Email"
+            value={email}
+            onChange={handleEmail}
           />
         </div>
 
@@ -58,6 +82,7 @@ const handleSubmit = (e) =>{                     {/* creamos una consta handleSu
     className="form-control"
     id="InputTelefono"
     placeholder="Pon aqui tu numero de Telefono"
+    value={telefono}
   />
 </div>
 
@@ -71,6 +96,7 @@ const handleSubmit = (e) =>{                     {/* creamos una consta handleSu
     className="form-control"
     id="InputDireccion"
     placeholder="Pon aqui tu Direccion"
+    value={direccion}
   />
 </div>
        
@@ -90,6 +116,11 @@ const handleSubmit = (e) =>{                     {/* creamos una consta handleSu
      - añadimos un onSubmit que llama a la funcion handleSubmit  
      - creamos una consta handleSumit con un evento (e) le añadimos preventDefault para que lo mande pero no recargue 
      - creamos un console.log("enviar") solo para verificar que funciona
+     - creamos una constate con los estados para poder llamarlos 
+     - creamos value=nombre para que cambie el estado que asignamos 
+     - creamos onChange para capturar los cambios que se realizen
+     - creamos una cosnt de handleNombre , con el evento (e) que guarda en setNombrey e guarda el value 
+     - 
 
 
 
