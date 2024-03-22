@@ -24,10 +24,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
       },
-
+/**  aqui trae de la de la views */
       createContact: (nombre, email, telefono, direccion) => {
         console.log(nombre, email, telefono, direccion);
       },
+
+
+
 
       changeColor: (index, color) => {
         //get the store

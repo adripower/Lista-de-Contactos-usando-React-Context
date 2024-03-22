@@ -7,7 +7,7 @@ import { Context } from "../store/appContext";
 
 export const AddContact = () => {
 
-  const {store, actions}= useContext(Context)
+  const {store, actions}= useContext(Context)     //**muy importante */
 
 
   const [nombre, setNombre] = useState("");         {/*creamos una constate con los estados para poder llamarlos */}
