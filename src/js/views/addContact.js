@@ -1,10 +1,13 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState,useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 
 
 
 export const AddContact = () => {
+
+  const {store, actions}= useContext(Context)
 
 
   const [nombre, setNombre] = useState("");         {/*creamos una constate con los estados para poder llamarlos */}
@@ -18,6 +21,7 @@ export const AddContact = () => {
   
 const handleSubmit = (e) =>{                     {/* creamos una consta handleSumit con un evento (e) le añadimos preventDefault para que lo mande pero no recargue */}
   e.preventDefault();
+  actions.createContact(nombre, email, telefono, direccion);
   console.log("enviar", {nombre, email, telefono, direccion});        {/* creamos un console.log("enviar") solo para verificar que funciona*/}
 
 }
