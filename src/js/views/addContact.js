@@ -1,4 +1,4 @@
-import React, { Component, useState,useContext } from "react";
+import React, { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
@@ -6,6 +6,12 @@ import { Context } from "../store/appContext";
 
 
 export const AddContact = () => {
+  
+
+
+
+
+  
 
   const {store, actions}= useContext(Context)     //**muy importante */
 
@@ -14,6 +20,7 @@ export const AddContact = () => {
   const [email, setEmail] = useState("");
   const [telefono, setTelefono]= useState("");
   const [direccion, setDireccion]= useState("");
+ 
 
 
 

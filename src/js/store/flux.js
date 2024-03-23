@@ -1,3 +1,5 @@
+import { json } from "react-router";
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -27,6 +29,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 /**  aqui trae de la de la views */
       createContact: (nombre, email, telefono, direccion) => {
         console.log(nombre, email, telefono, direccion);
+
+fetch("https://playground.4geeks.com/apis/fake/contact/"),{
+  method: "POST",
+  body: JSON.stringify(
+    {
+      "full_name": nombre,
+      "email": email,
+    
+      "address":direccion,
+      "phone":telefono
+    }
+  ),
+  Headers:{
+    "content-type":"application/json"
+  }
+
+}.then((response)=>{
+  return response.json()
+})
+  .then((data)=>{
+    console.log(data);
+  })
+  .cattch((error)=>{
+    console.log(error)
+  })
+
       },
 
 
