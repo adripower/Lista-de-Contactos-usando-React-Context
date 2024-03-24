@@ -6,14 +6,20 @@ import { Context } from "../store/appContext";
 
 
 //------------aqui la API.
-export const CreateUser = ()=>{
-	fetch('https://playground.4geeks.com/apis/fake/todos/user/adri123',{
+export const CreateUser = (nuevoContacto)=>{
+	fetch('https://playground.4geeks.com/apis/fake/contact',{
 		method:"POST",
 		headers:{
 			"Content-Type":"application/json"
 			
 		},
-		body: JSON.stringify([])
+		body: JSON.stringify({
+			nombre:nuevoContacto.nombre,
+			email:nuevoContacto.email,
+			direccion:nuevoContacto,direccion,
+			telefono:nuevoContacto.telefono
+
+		})
 	})
 		.then((respuesta)=>respuesta.json())
 		.then((data)=>console.log(data))
